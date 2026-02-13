@@ -9,6 +9,215 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CO-PO Mapping Styles */
+        .mapping-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 0;
+        }
+
+        .mapping-intro {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        .mapping-legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+
+        .legend-item span {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .mapping-table-container {
+            overflow-x: auto;
+            margin: 40px 0;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .mapping-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: transparent;
+            min-width: 800px;
+        }
+
+        .mapping-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .mapping-table th {
+            padding: 15px;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mapping-table th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        .mapping-table th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .mapping-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mapping-table tbody tr {
+            background: rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .mapping-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .co-label {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .level-3 {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(56, 239, 125, 0.3);
+        }
+
+        .level-2 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        .level-1 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);
+        }
+
+        .level-0 {
+            background: rgba(100, 100, 100, 0.3);
+            color: #888888;
+            font-weight: 500;
+        }
+
+        .mapping-justification {
+            margin-top: 60px;
+        }
+
+        .mapping-justification h3 {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .justification-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 4px solid #667eea;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .justification-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-left-color: #764ba2;
+        }
+
+        .justification-card h4 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .justification-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .justification-card li {
+            color: #d0d0d0;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .justification-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .justification-card li strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .mapping-legend {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mapping-table-container {
+                padding: 10px;
+            }
+
+            .justification-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -129,11 +338,191 @@
         </div>
     </section>
 
+    <!-- CO-PO Mapping -->
+    <section class="section mapping-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03</span>
+                CO-PO Mapping
+            </h2>
+            
+            <div class="mapping-intro">
+                <p>The Course Outcomes (COs) are mapped to Program Outcomes (POs) on a scale of 0-3, where:</p>
+                <div class="mapping-legend">
+                    <div class="legend-item"><span class="level-3">3</span> Strong correlation</div>
+                    <div class="legend-item"><span class="level-2">2</span> Medium correlation</div>
+                    <div class="legend-item"><span class="level-1">1</span> Weak correlation</div>
+                    <div class="legend-item"><span class="level-0">0</span> No correlation</div>
+                </div>
+            </div>
+
+            <div class="mapping-table-container">
+                <table class="mapping-table">
+                    <thead>
+                        <tr>
+                            <th>CO</th>
+                            <th>PO1</th>
+                            <th>PO2</th>
+                            <th>PO3</th>
+                            <th>PO4</th>
+                            <th>PO5</th>
+                            <th>PO6</th>
+                            <th>PO7</th>
+                            <th>PO8</th>
+                            <th>PO9</th>
+                            <th>PO10</th>
+                            <th>PO11</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="co-label">CO1</td>
+                            <td class="level-3">3</td>
+                            <td class="level-1">1</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-2">2</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-2">2</td>
+                        </tr>
+                        <tr>
+                            <td class="co-label">CO2</td>
+                            <td class="level-3">3</td>
+                            <td class="level-2">2</td>
+                            <td class="level-2">2</td>
+                            <td class="level-1">1</td>
+                            <td class="level-3">3</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-2">2</td>
+                        </tr>
+                        <tr>
+                            <td class="co-label">CO3</td>
+                            <td class="level-3">3</td>
+                            <td class="level-2">2</td>
+                            <td class="level-3">3</td>
+                            <td class="level-2">2</td>
+                            <td class="level-3">3</td>
+                            <td class="level-1">1</td>
+                            <td class="level-0">0</td>
+                            <td class="level-1">1</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-2">2</td>
+                        </tr>
+                        <tr>
+                            <td class="co-label">CO4</td>
+                            <td class="level-3">3</td>
+                            <td class="level-2">2</td>
+                            <td class="level-3">3</td>
+                            <td class="level-2">2</td>
+                            <td class="level-3">3</td>
+                            <td class="level-1">1</td>
+                            <td class="level-0">0</td>
+                            <td class="level-1">1</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-2">2</td>
+                        </tr>
+                        <tr>
+                            <td class="co-label">CO5</td>
+                            <td class="level-3">3</td>
+                            <td class="level-2">2</td>
+                            <td class="level-2">2</td>
+                            <td class="level-1">1</td>
+                            <td class="level-2">2</td>
+                            <td class="level-1">1</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-0">0</td>
+                            <td class="level-3">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mapping-justification">
+                <h3>Mapping Justification</h3>
+                
+                <div class="justification-card">
+                    <h4>CO1: Number Systems & Codes</h4>
+                    <ul>
+                        <li><strong>PO1 (3):</strong> Directly applies mathematical knowledge and engineering fundamentals in number systems, conversions, and binary arithmetic operations.</li>
+                        <li><strong>PO2 (1):</strong> Minimal problem analysis - primarily focuses on applying standard procedures for conversions and arithmetic.</li>
+                        <li><strong>PO5 (2):</strong> Uses computational tools and techniques for number system conversions and error detection codes.</li>
+                        <li><strong>PO11 (2):</strong> Establishes foundation for learning advanced digital concepts and emerging technologies.</li>
+                    </ul>
+                </div>
+
+                <div class="justification-card">
+                    <h4>CO2: Logic Functions</h4>
+                    <ul>
+                        <li><strong>PO1 (3):</strong> Applies Boolean algebra mathematics and engineering fundamentals to represent and minimize logic functions.</li>
+                        <li><strong>PO2 (2):</strong> Involves analyzing logic problems, formulating Boolean expressions, and minimizing using K-Map techniques.</li>
+                        <li><strong>PO3 (2):</strong> Designs optimized logic solutions using different minimization techniques and gate realizations.</li>
+                        <li><strong>PO4 (1):</strong> Limited investigation through comparison of different minimization approaches.</li>
+                        <li><strong>PO5 (3):</strong> Extensively uses modern tools like K-Map, Boolean algebra, and circuit simulation for logic minimization.</li>
+                        <li><strong>PO11 (2):</strong> Develops critical thinking for logic optimization applicable to emerging digital design methodologies.</li>
+                    </ul>
+                </div>
+
+                <div class="justification-card">
+                    <h4>CO3: Combinational Circuits</h4>
+                    <ul>
+                        <li><strong>PO1 (3):</strong> Applies comprehensive engineering knowledge to implement arithmetic circuits, multiplexers, encoders, decoders, and comparators.</li>
+                        <li><strong>PO2 (2):</strong> Analyzes complex combinational problems and selects appropriate MSI devices for implementation.</li>
+                        <li><strong>PO3 (3):</strong> Designs complete combinational systems using basic gates and MSI devices to meet specific functional requirements.</li>
+                        <li><strong>PO4 (2):</strong> Investigates circuit behavior through design, testing, and verification of combinational logic.</li>
+                        <li><strong>PO5 (3):</strong> Utilizes simulation tools, MSI device datasheets, and modern design techniques extensively.</li>
+                        <li><strong>PO6 (1):</strong> Basic awareness of resource optimization and efficient circuit design for sustainability.</li>
+                        <li><strong>PO8 (1):</strong> Laboratory work involves collaborative implementation and testing of circuits.</li>
+                        <li><strong>PO11 (2):</strong> Foundation for advanced combinational design in modern digital systems and FPGAs.</li>
+                    </ul>
+                </div>
+
+                <div class="justification-card">
+                    <h4>CO4: Sequential Circuits</h4>
+                    <ul>
+                        <li><strong>PO1 (3):</strong> Applies advanced digital engineering concepts including state machines, flip-flops, counters, and registers.</li>
+                        <li><strong>PO2 (2):</strong> Analyzes timing diagrams, state transitions, and sequential behavior for complex problems.</li>
+                        <li><strong>PO3 (3):</strong> Designs complete sequential systems (counters, shift registers) using flip-flops and MSI devices.</li>
+                        <li><strong>PO4 (2):</strong> Investigates sequential circuit operation through timing analysis and state diagram verification.</li>
+                        <li><strong>PO5 (3):</strong> Uses timing analyzers, state diagram tools, and MSI sequential devices for implementation.</li>
+                        <li><strong>PO6 (1):</strong> Understanding of power consumption and timing constraints in sequential designs.</li>
+                        <li><strong>PO8 (1):</strong> Collaborative laboratory work for building and testing sequential circuits.</li>
+                        <li><strong>PO11 (2):</strong> Essential foundation for modern synchronous design and microprocessor architecture.</li>
+                    </ul>
+                </div>
+
+                <div class="justification-card">
+                    <h4>CO5: Advanced Design Foundations</h4>
+                    <ul>
+                        <li><strong>PO1 (3):</strong> Applies theoretical knowledge of finite state machines and programmable logic devices.</li>
+                        <li><strong>PO2 (2):</strong> Analyzes state machine behavior and programmable logic implementation strategies.</li>
+                        <li><strong>PO3 (2):</strong> Designs basic Mealy/Moore machines and understands PROM/PLA/PAL-based implementations.</li>
+                        <li><strong>PO4 (1):</strong> Limited investigation through state diagram analysis and PLD configuration.</li>
+                        <li><strong>PO5 (2):</strong> Introduction to programmable logic tools and state machine design software.</li>
+                        <li><strong>PO6 (1):</strong> Awareness of reconfigurable hardware benefits for sustainable design.</li>
+                        <li><strong>PO11 (3):</strong> Strong foundation for lifelong learning in FPGA, ASIC design, and advanced digital systems - prepares for emerging technologies.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Course Modules -->
     <section class="section modules-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">03</span>
+                <span class="title-number">04</span>
                 Course Modules
             </h2>
             
@@ -278,7 +667,7 @@
     <section class="section assessment-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">04</span>
+                <span class="title-number">05</span>
                 Assessment Scheme
             </h2>
             <div class="assessment-grid">
@@ -316,7 +705,7 @@
     <section class="section materials-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">05</span>
+                <span class="title-number">06</span>
                 Course Materials
             </h2>
             <div class="materials-grid">
