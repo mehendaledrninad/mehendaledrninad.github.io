@@ -1,62 +1,370 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Digital Logic Design</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/digital.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Logic Design course by Dr Ninad Mehendale covering number systems, combinational and sequential circuits">
+    <title>Digital Logic Design | Course Portal</title>
+    <link rel="stylesheet" href="css/digital.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+        </div>
+    </nav>
+    
+    <!-- Circuit Background Animation -->
+    <div class="circuit-bg"></div>
+    
+    <!-- Header -->
+    <header class="hero">
+        <div class="container">
+            <div class="course-badge">
+                <span class="badge-code">316U06C202</span>
+                <span class="badge-type">Essential Course</span>
+            </div>
+            <h1 class="course-title">
+                <span class="title-pre">Course:</span>
+                Digital Logic Design
+            </h1>
+            <p class="course-faculty">Instructor: Dr. Ninad Dileep Mehendale</p>
+            <p class="course-tagline">Master the fundamentals of digital systems and circuit design</p>
+            
+            <div class="course-meta">
+                <div class="meta-card">
+                    <div class="meta-icon">⏱</div>
+                    <div class="meta-content">
+                        <span class="meta-label">Duration</span>
+                        <span class="meta-value">45 Hours</span>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-icon">🎓</div>
+                    <div class="meta-content">
+                        <span class="meta-label">Credits</span>
+                        <span class="meta-value">3 + 1 Lab</span>
+                    </div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-icon">📊</div>
+                    <div class="meta-content">
+                        <span class="meta-label">Assessment</span>
+                        <span class="meta-value">100 Marks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<header>
-<h1>Digital Logic Design</h1>
-</header>
+    <!-- Course Objectives -->
+    <section class="section objectives-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01</span>
+                Course Objectives
+            </h2>
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="card-glow"></div>
+                    <p>Digital systems have a prominent role in everyday life. To understand the operation of digital systems, it is necessary to have a basic knowledge of digital circuits and their logical functions.</p>
+                </div>
+                <div class="objective-card">
+                    <div class="card-glow"></div>
+                    <p>The objective of this course is to familiarize the student with fundamental principles of digital design. It has been designed to address multidisciplinary students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="courses.html">Courses</a>
-</nav>
+    <!-- Course Outcomes -->
+    <section class="section outcomes-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02</span>
+                Learning Outcomes
+            </h2>
+            <div class="outcomes-list">
+                <div class="outcome-item" style="animation-delay: 0.1s">
+                    <div class="outcome-number">CO1</div>
+                    <div class="outcome-content">
+                        <h3>Number Systems & Codes</h3>
+                        <p>Understand the fundamentals of number systems, codes, and arithmetic operations.</p>
+                    </div>
+                </div>
+                <div class="outcome-item" style="animation-delay: 0.2s">
+                    <div class="outcome-number">CO2</div>
+                    <div class="outcome-content">
+                        <h3>Logic Functions</h3>
+                        <p>Represent, implement, and minimize logic functions using different techniques.</p>
+                    </div>
+                </div>
+                <div class="outcome-item" style="animation-delay: 0.3s">
+                    <div class="outcome-number">CO3</div>
+                    <div class="outcome-content">
+                        <h3>Combinational Circuits</h3>
+                        <p>Implement combinational logic circuits and their applications using basic gates and MSI devices.</p>
+                    </div>
+                </div>
+                <div class="outcome-item" style="animation-delay: 0.4s">
+                    <div class="outcome-number">CO4</div>
+                    <div class="outcome-content">
+                        <h3>Sequential Circuits</h3>
+                        <p>Implement sequential logic circuits and applications using MSI devices.</p>
+                    </div>
+                </div>
+                <div class="outcome-item" style="animation-delay: 0.5s">
+                    <div class="outcome-number">CO5</div>
+                    <div class="outcome-content">
+                        <h3>Advanced Design</h3>
+                        <p>Understand basic principles required for advanced Digital Design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="container">
+    <!-- Course Modules -->
+    <section class="section modules-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03</span>
+                Course Modules
+            </h2>
+            
+            <!-- Module 1 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-meta">
+                        <span class="module-number">Module 01</span>
+                        <span class="module-hours">9 Hours</span>
+                    </div>
+                    <h3 class="module-title">Number Representation and Codes</h3>
+                </div>
+                <div class="module-content">
+                    <div class="topic-list">
+                        <div class="topic">
+                            <span class="topic-bullet">1.1</span>
+                            <span class="topic-text"><strong>Number Systems and Conversions:</strong> Binary, Octal, Decimal, Hexadecimal, Conversions between number systems, Signed numbers: Two's complement, Sign magnitude</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">1.2</span>
+                            <span class="topic-text"><strong>Binary Operations:</strong> Binary Addition and Subtraction (1's and 2's complement method)</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">1.3</span>
+                            <span class="topic-text"><strong>Codes:</strong> Binary-coded decimal (BCD), Gray code, Concept of parity for error detection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<h2>Course Overview</h2>
-<p>
-Digital systems play a crucial role in modern electronics. This course introduces
-fundamental concepts of number systems, logic design, combinational circuits,
-sequential circuits, and foundations of digital system design.
-</p>
+            <!-- Module 2 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-meta">
+                        <span class="module-number">Module 02</span>
+                        <span class="module-hours">10 Hours</span>
+                    </div>
+                    <h3 class="module-title">Logic Representation and Minimization Techniques</h3>
+                </div>
+                <div class="module-content">
+                    <div class="topic-list">
+                        <div class="topic">
+                            <span class="topic-bullet">2.1</span>
+                            <span class="topic-text"><strong>Logic Gates:</strong> AND, OR, NOT, NAND, NOR, XOR, XNOR. Universal Gates: Functionality of NAND and NOR. Rules and properties of Boolean algebra</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">2.2</span>
+                            <span class="topic-text"><strong>Minimization:</strong> Combinational logic representation using truth table, sum of products (SOP) and products of sum (POS), Minimization techniques using Boolean Algebra, K-Map (2,3,4 Variable), Realization of circuits using Basic gates and Universal gates</span>
+                        </div>
+                        <div class="self-learning">
+                            <span class="self-tag">Self-Learning</span>
+                            <span>Quine-McCluskey method for reduction of SOP/POS expression</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<h2>Course Outcomes</h2>
-<ul>
-<li>Understand number systems and arithmetic operations</li>
-<li>Minimize and implement logic functions</li>
-<li>Design combinational circuits</li>
-<li>Design sequential circuits</li>
-<li>Understand advanced digital design foundations</li>
-</ul>
+            <!-- Module 3 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-meta">
+                        <span class="module-number">Module 03</span>
+                        <span class="module-hours">12 Hours</span>
+                    </div>
+                    <h3 class="module-title">Combinational Circuits</h3>
+                </div>
+                <div class="module-content">
+                    <div class="topic-list">
+                        <div class="topic">
+                            <span class="topic-bullet">3.1</span>
+                            <span class="topic-text"><strong>Arithmetic Circuits:</strong> Study of combinational circuits such as Adder, subtractor, controlled adder/subtractor, Use of MSI devices for adder</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">3.2</span>
+                            <span class="topic-text"><strong>MSI Devices:</strong> Multiplexer, demultiplexer, encoder, priority encoder, decoder, multiplexer tree and decoder tree. Use of MSI devices for multiplexer, decoder</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">3.3</span>
+                            <span class="topic-text"><strong>Comparators:</strong> 1-bit and 2-bit magnitude comparator, 4 bit comparator</span>
+                        </div>
+                        <div class="self-learning">
+                            <span class="self-tag">Self-Learning</span>
+                            <span>BCD adder/subtractor, Binary to 7 segment decoder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<h2>Syllabus</h2>
+            <!-- Module 4 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-meta">
+                        <span class="module-number">Module 04</span>
+                        <span class="module-hours">10 Hours</span>
+                    </div>
+                    <h3 class="module-title">Sequential Logic Circuits</h3>
+                </div>
+                <div class="module-content">
+                    <div class="topic-list">
+                        <div class="topic">
+                            <span class="topic-bullet">4.1</span>
+                            <span class="topic-text"><strong>Flip-Flops:</strong> Latches and flip-flops: Types: SR, D, JK, T flip-flops truth tables, Excitation table, and characteristics equations</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">4.2</span>
+                            <span class="topic-text"><strong>Counters:</strong> Asynchronous counters, Synchronous counters, up/down counter, mod counters using flipflops, Use of MSI devices for counters</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">4.3</span>
+                            <span class="topic-text"><strong>Registers:</strong> Shift registers using D-FF and types of shift registers (SISO, SIPO, PIPO, PISO). MSI shift register, Ring and Johnson Counter using Shift register</span>
+                        </div>
+                        <div class="self-learning">
+                            <span class="self-tag">Self-Learning</span>
+                            <span>Conversion of Flip-flop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<h3>Module 1 – Number Representation and Codes</h3>
-<p>Binary, Octal, Decimal, Hexadecimal systems, conversions, complements, BCD, Gray code, parity.</p>
+            <!-- Module 5 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-meta">
+                        <span class="module-number">Module 05</span>
+                        <span class="module-hours">4 Hours</span>
+                    </div>
+                    <h3 class="module-title">Foundations of Digital Design</h3>
+                </div>
+                <div class="module-content">
+                    <div class="topic-list">
+                        <div class="topic">
+                            <span class="topic-bullet">5.1</span>
+                            <span class="topic-text"><strong>Synchronous Machines:</strong> Introduction to Synchronous Machine (Mealy and Moore): Block diagram level and its representation as state diagram</span>
+                        </div>
+                        <div class="topic">
+                            <span class="topic-bullet">5.2</span>
+                            <span class="topic-text"><strong>Programmable Logic:</strong> Introduction, realization of logic expressions with PROM, PLA and PAL and their implementation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3>Module 2 – Logic Representation and Minimization</h3>
-<p>Logic gates, Boolean algebra, SOP, POS, K-Map minimization, circuit realization.</p>
+    <!-- Assessment Scheme -->
+    <section class="section assessment-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04</span>
+                Assessment Scheme
+            </h2>
+            <div class="assessment-grid">
+                <div class="assessment-card theory">
+                    <h3>Theory (100 Marks)</h3>
+                    <div class="assessment-breakdown">
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Internal Assessment (IA)</span>
+                            <span class="breakdown-value">20</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Mid-Semester Exam (MSE)</span>
+                            <span class="breakdown-value">30</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">End-Semester Exam (ESE)</span>
+                            <span class="breakdown-value">50</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="assessment-card lab">
+                    <h3>Laboratory</h3>
+                    <div class="lab-info">
+                        <p><strong>Course Code:</strong> 316U06L202</p>
+                        <p><strong>Hours:</strong> 2 hours per week</p>
+                        <p><strong>Credits:</strong> 1</p>
+                        <p>Practical implementation of all theoretical concepts with MSI devices and circuit design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3>Module 3 – Combinational Circuits</h3>
-<p>Adders, subtractors, multiplexers, encoders, decoders, comparators.</p>
+    <!-- Course Materials -->
+    <section class="section materials-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05</span>
+                Course Materials
+            </h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-icon">📚</div>
+                    <h3>Lecture Slides</h3>
+                    <p>Comprehensive presentation slides for all modules</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">📝</div>
+                    <h3>Previous Question Papers</h3>
+                    <p>Past exam papers with solutions for practice</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">🔬</div>
+                    <h3>Lab Manual</h3>
+                    <p>Step-by-step laboratory experiment guidelines</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">📖</div>
+                    <h3>Reference Books</h3>
+                    <p>Recommended textbooks and reading materials</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3>Module 4 – Sequential Logic Circuits</h3>
-<p>Flip-flops, counters, registers, shift registers, ring and Johnson counters.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-title">Digital Logic Design</p>
+                    <p class="footer-code">Course Code: 316U06C202 | SVU16U1019 KJSCE316U06C203</p>
+                </div>
+                <div class="footer-note">
+                    <p>Prerequisites: None | Designed for multidisciplinary students</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<h3>Module 5 – Foundations of Digital Design</h3>
-<p>Mealy and Moore machines, PROM, PLA, PAL implementation.</p>
-
-</div>
-
-<footer>
-© Dr Ninad Mehendale
-</footer>
+    <!-- Back to Top Button -->
+    <a href="#" class="top-btn" title="Back to Top">↑</a>
 
 </body>
 </html>
