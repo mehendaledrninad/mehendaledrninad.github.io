@@ -217,6 +217,255 @@
                 padding: 20px;
             }
         }
+
+        /* Laboratory CA Styles */
+        .lab-ca-section {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            padding: 80px 0;
+        }
+
+        .lab-header-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lab-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .lab-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .faculty-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border-left: 4px solid #4facfe;
+        }
+
+        .faculty-section h3 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .faculty-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .faculty-name {
+            background: rgba(79, 172, 254, 0.2);
+            color: #4facfe;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(79, 172, 254, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .faculty-name:hover {
+            background: rgba(79, 172, 254, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .faculty-name.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            border: none;
+            font-weight: 700;
+        }
+
+        .ca-distribution {
+            margin-bottom: 40px;
+        }
+
+        .ca-distribution h3,
+        .rubrics-section h3 {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .ca-table-container,
+        .rubrics-table-container {
+            overflow-x: auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .ca-table,
+        .rubrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: transparent;
+        }
+
+        .ca-table thead,
+        .rubrics-table thead {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .ca-table th,
+        .rubrics-table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 700;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ca-table td,
+        .rubrics-table td {
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #d0d0d0;
+            line-height: 1.6;
+        }
+
+        .ca-table tbody tr,
+        .rubrics-table tbody tr {
+            background: rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .ca-table tbody tr:hover,
+        .rubrics-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .marks-cell {
+            text-align: center;
+            font-weight: 700;
+            color: #4facfe;
+            font-size: 18px;
+        }
+
+        .total-row {
+            background: rgba(79, 172, 254, 0.2) !important;
+            border-top: 2px solid #4facfe;
+        }
+
+        .total-row td {
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .criterion-name {
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .level-excellent {
+            background: rgba(56, 239, 125, 0.1);
+            border-left: 3px solid #38ef7d;
+        }
+
+        .level-good {
+            background: rgba(79, 172, 254, 0.1);
+            border-left: 3px solid #4facfe;
+        }
+
+        .level-needs {
+            background: rgba(250, 112, 154, 0.1);
+            border-left: 3px solid #fa709a;
+        }
+
+        .rubrics-section {
+            margin-bottom: 40px;
+        }
+
+        .signature-section {
+            margin-top: 40px;
+        }
+
+        .signature-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .signature-date,
+        .signature-line {
+            color: #d0d0d0;
+            margin: 0;
+        }
+
+        .signature-date strong,
+        .signature-line strong {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .lab-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-list {
+                gap: 8px;
+            }
+
+            .faculty-name {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .ca-table-container,
+            .rubrics-table-container {
+                padding: 10px;
+            }
+
+            .ca-table th,
+            .ca-table td,
+            .rubrics-table th,
+            .rubrics-table td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .signature-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
@@ -701,11 +950,170 @@
         </div>
     </section>
 
+    <!-- Laboratory Continuous Assessment -->
+    <section class="section lab-ca-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06</span>
+                Laboratory Continuous Assessment
+            </h2>
+            
+            <div class="lab-header-info">
+                <div class="lab-info-grid">
+                    <div class="lab-info-item">
+                        <span class="info-label">Department</span>
+                        <span class="info-value">Science and Humanities</span>
+                    </div>
+                    <div class="lab-info-item">
+                        <span class="info-label">Program</span>
+                        <span class="info-value">B. Tech</span>
+                    </div>
+                    <div class="lab-info-item">
+                        <span class="info-label">Class</span>
+                        <span class="info-value">FY</span>
+                    </div>
+                    <div class="lab-info-item">
+                        <span class="info-label">Semester</span>
+                        <span class="info-value">II</span>
+                    </div>
+                    <div class="lab-info-item">
+                        <span class="info-label">Academic Term</span>
+                        <span class="info-value">Jan 2025 - June 2025</span>
+                    </div>
+                    <div class="lab-info-item">
+                        <span class="info-label">Course</span>
+                        <span class="info-value">316U06L202 - DLD Laboratory</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-section">
+                <h3>Faculty In-charge</h3>
+                <div class="faculty-list">
+                    <span class="faculty-name primary">Dr. Ninad Mehendale</span>
+                    <span class="faculty-name">Dr. M B Zalte</span>
+                    <span class="faculty-name">Prof. Sangeeta Kulkarni</span>
+                    <span class="faculty-name">Dr. Vaibhav Naravane</span>
+                    <span class="faculty-name">Prof. Sonia Joshi</span>
+                    <span class="faculty-name">Dr. Ashwini Kumar</span>
+                    <span class="faculty-name">Prof. Sandeep Hanumante</span>
+                    <span class="faculty-name">Prof. Jyoti Varawadekar</span>
+                    <span class="faculty-name">Dr. Kiran Ajetrao</span>
+                    <span class="faculty-name">Prof. Kirti Sawlani</span>
+                    <span class="faculty-name">Prof. Ruchira Jadhav</span>
+                    <span class="faculty-name">Prof. Rehna Salam</span>
+                    <span class="faculty-name">Prof. Vijay Bhosale</span>
+                    <span class="faculty-name">Ms. Simranjit Kaur</span>
+                </div>
+            </div>
+
+            <div class="ca-distribution">
+                <h3>Distribution of CA Marks</h3>
+                <div class="ca-table-container">
+                    <table class="ca-table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Task</th>
+                                <th>Schedule</th>
+                                <th>Marks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Attendance and performance of Experiment</td>
+                                <td>Every week</td>
+                                <td class="marks-cell">10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>On time submission of correct write-ups</td>
+                                <td>Every week</td>
+                                <td class="marks-cell">10</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Oral based on entire syllabus</td>
+                                <td>April 01-15, 2026</td>
+                                <td class="marks-cell">15</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Practical examination based on all experiments performed</td>
+                                <td>April 01-15, 2026</td>
+                                <td class="marks-cell">15</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>Total</strong></td>
+                                <td class="marks-cell"><strong>50</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="rubrics-section">
+                <h3>Rubrics for Evaluation</h3>
+                <div class="rubrics-table-container">
+                    <table class="rubrics-table">
+                        <thead>
+                            <tr>
+                                <th>Criterion</th>
+                                <th>Marks</th>
+                                <th>Performance Level 1 (Excellent)</th>
+                                <th>Performance Level 2 (Good)</th>
+                                <th>Performance Level 3 (Needs Improvement)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="criterion-name">Attendance and Experiment Performance</td>
+                                <td class="marks-cell">10</td>
+                                <td class="level-excellent">Regular attendance in all lab sessions; actively performs experiments with good understanding and engagement</td>
+                                <td class="level-good">Minor irregularity in attendance; performs experiments satisfactorily with occasional guidance</td>
+                                <td class="level-needs">Irregular attendance; incomplete or passive participation in experiments</td>
+                            </tr>
+                            <tr>
+                                <td class="criterion-name">Laboratory Write-up and Documentation</td>
+                                <td class="marks-cell">10</td>
+                                <td class="level-excellent">Write-ups submitted on time every week; clear aim, complete procedure, correct truth table, neat and accurate circuit diagram</td>
+                                <td class="level-good">Minor delay in submission; write-ups mostly correct with small errors or missing details</td>
+                                <td class="level-needs">Late or incomplete submissions; incorrect or poorly documented experiments</td>
+                            </tr>
+                            <tr>
+                                <td class="criterion-name">Oral Examination</td>
+                                <td class="marks-cell">15</td>
+                                <td class="level-excellent">Thorough understanding of entire syllabus; answers confidently and accurately; explains concepts and circuits clearly</td>
+                                <td class="level-good">Basic understanding of concepts; answers most questions correctly with minor inaccuracies</td>
+                                <td class="level-needs">Limited understanding; unable to explain concepts or experimental outcomes clearly</td>
+                            </tr>
+                            <tr>
+                                <td class="criterion-name">Practical Examination</td>
+                                <td class="marks-cell">15</td>
+                                <td class="level-excellent">Correct circuit assembly; expected output obtained; efficient component usage; neat breadboard; effective troubleshooting</td>
+                                <td class="level-good">Minor connection errors; output mostly correct; adequate component usage and organization</td>
+                                <td class="level-needs">Incorrect assembly; wrong or no output; poor organization; unable to troubleshoot</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="signature-section">
+                <div class="signature-box">
+                    <p class="signature-date"><strong>Date:</strong> 05/02/2026</p>
+                    <p class="signature-line"><strong>Signature of Faculty In-charge:</strong> Dr. Ninad Mehendale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Course Materials -->
     <section class="section materials-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">06</span>
+                <span class="title-number">07</span>
                 Course Materials
             </h2>
             <div class="materials-grid">
