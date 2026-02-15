@@ -643,6 +643,15 @@ body {
 }
 
 .material-card {
+    /* Styles for the anchor tag behavior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    /* Existing styles */
     background: var(--secondary-dark);
     padding: var(--spacing-lg);
     border-radius: 12px;
