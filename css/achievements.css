@@ -1,0 +1,313 @@
+/* ================================
+   Achievements Page CSS
+   Premium Aesthetic for Honors
+   ================================ */
+
+:root {
+    /* Color Palette - Premium Theme */
+    --primary-bg: #fdfbf7;
+    --secondary-bg: #ffffff;
+    --accent-gold: #d4af37;
+    --accent-gold-light: #f3e5ab;
+    --accent-dark: #1c2331;
+    --text-primary: #2a3b4c;
+    --text-secondary: #5a6b7c;
+    --text-muted: #8b9bb4;
+    --border-subtle: rgba(212, 175, 55, 0.2);
+    --glow-gold: rgba(212, 175, 55, 0.4);
+    
+    /* Typography */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 4rem;
+    
+    /* Animations */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ================================
+   Navigation Bar (Matches Site)
+   ================================ */
+
+nav {
+    background: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #002b5c;
+    transition: color var(--transition-fast);
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* ================================
+   Header
+   ================================ */
+
+header {
+    background: var(--accent-dark);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-xl) 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+header h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ================================
+   Main Container
+   ================================ */
+
+.container {
+    max-width: 1000px;
+    margin: var(--spacing-xl) auto;
+    padding: 0 20px;
+}
+
+/* ================================
+   Achievements Grid
+   ================================ */
+
+.achievements-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* ================================
+   Achievement Card
+   ================================ */
+
+.achievement-card {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--accent-gold);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .achievement-card {
+        grid-template-columns: 1fr 300px;
+        align-items: center;
+    }
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-card::after {
+    content: '🏆';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 150px;
+    opacity: 0.03;
+    pointer-events: none;
+    transform: rotate(15deg);
+}
+
+.achievement-content {
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-badge {
+    display: inline-block;
+    background: var(--accent-gold-light);
+    color: #8a6a1c;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid var(--accent-gold);
+}
+
+.achievement-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--accent-dark);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.achievement-org {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+.achievement-details {
+    list-style: none;
+    margin-bottom: var(--spacing-lg);
+}
+
+.achievement-details li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.achievement-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.achievement-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent-gold);
+    color: white;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+    background: #c19b2e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-dark);
+    border: 1px solid var(--accent-dark);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-dark);
+    color: white;
+}
+
+/* ================================
+   Visual Highlight Matrix
+   ================================ */
+
+.achievement-stats {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+    text-align: center;
+    border: 1px solid #edf2f7;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    font-family: var(--font-serif);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ================================
+   Footer
+   ================================ */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--accent-dark);
+    color: white;
+    margin-top: var(--spacing-xl);
+    font-size: 0.9rem;
+}
