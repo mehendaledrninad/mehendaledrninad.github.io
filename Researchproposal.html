@@ -1319,7 +1319,7 @@ summary_items = [
     ('E. Travel', trav_total),
 ]
 
-bs_table = make_table(len(summary_items) + 4, 2, headers=['Budget Head', 'Amount (₹)'])
+bs_table = make_table(len(summary_items) + 5, 2, headers=['Budget Head', 'Amount (₹)'])
 for i, (head, amt) in enumerate(summary_items):
     fmt_cell(bs_table.rows[i + 1].cells[0], head, size=11)
     fmt_cell(bs_table.rows[i + 1].cells[1], f"{amt:,.0f}", size=11, align='right')
